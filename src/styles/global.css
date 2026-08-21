@@ -1,0 +1,72 @@
+:root {
+  --color-dark: #3a3733;
+  --color-dark-translucent: rgba(58, 55, 51, 0.55);
+  --color-white: #ffffff;
+  --color-text-muted: #6b6b6b;
+  --color-bg-warm: #ded8cf;
+  --color-accent-teal: #2f7a6f;
+
+  --hero-overlay-opacity: 0.35;
+  --hero-overlay-color: 20, 18, 16;
+  --wash-opacity: 0.75;
+  --wash-color: 240, 238, 233;
+
+  --radius-pill: 999px;
+  --radius-card: 20px;
+
+  --font-family: 'Poppins', 'Montserrat', sans-serif;
+
+  --container-max: 1200px;
+  --section-padding-y: 100px;
+  --section-padding-x: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--section-padding-x);
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-inline: 20px;
+  }
+}

@@ -1,17 +1,29 @@
 ---
-
+import '../styles/global.css';
+import Hero from '../components/Hero.astro';
+import WhyUs from '../components/WhyUs.astro';
+import ContactCard from '../components/ContactCard.astro';
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta name="description" content="Asesoramiento impositivo claro, moderno y a tu medida. Estudio contable DMG, Mar del Plata." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Contable DMG</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Hero />
+		<WhyUs />
+		<ContactCard />
 	</body>
 </html>
