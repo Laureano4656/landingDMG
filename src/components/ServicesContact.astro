@@ -1,12 +1,61 @@
 ---
 import Logo from './Logo.astro';
-import '../styles/ContactCard.css';
+import '../styles/ServicesContact.css';
 ---
 
-<section class="contact" id="contacto">
-  <img class="contact__bg" src="/foto-diplomas.png" alt="" aria-hidden="true" />
-  <div class="contact__wash"></div>
+<section class="services-contact" id="servicios">
+  <img class="services-contact__bg" src="/foto-diplomas.png" alt="" aria-hidden="true" />
+  <div class="services-contact__wash"></div>
   <div class="container">
+    <h2 class="services-contact__search">
+      <span>¿Por qué elegirnos?</span>
+      <svg
+        class="services-contact__search-icon"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        aria-hidden="true"
+      >
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+      </svg>
+    </h2>
+
+    <div class="services-contact__grid">
+      <article class="services-contact__col">
+        <h3 class="services-contact__pill">+30 años de experiencia</h3>
+        <p>
+          Hace más de 30 años brindamos <strong>asesoramiento contable</strong> e
+          <strong>impositivo</strong> con compromiso, experiencia y una atención cercana,
+          acompañando a cada cliente con soluciones claras y profesionales.
+        </p>
+      </article>
+
+      <article class="services-contact__col">
+        <h3 class="services-contact__pill">Más de 500 clientes</h3>
+        <p>
+          A lo largo de nuestra trayectoria trabajamos junto a
+          <strong>más de 500 clientes</strong>, ofreciendo soluciones contables adaptadas a cada
+          necesidad con profesionalismo y dedicación.
+        </p>
+      </article>
+
+      <article class="services-contact__col">
+        <h3 class="services-contact__pill">Adaptación constante</h3>
+        <p>
+          Nos adaptamos constantemente a los cambios del entorno profesional y tecnológico,
+          incorporando <strong>herramientas modernas</strong> para brindar un servicio más ágil,
+          claro y eficiente.
+        </p>
+      </article>
+    </div>
+  </div>
+
+  <div class="container services-contact__contact-container" id="contacto">
     <div class="contact__card">
       <Logo size="small" align="left" />
       <div class="contact__divider"></div>
