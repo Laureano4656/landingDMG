@@ -76,16 +76,27 @@
 }
 
 @media (max-width: 640px) {
-  .hero__btn {
-    font-size: 14px;
-    padding: 12px 28px;
+  .hero__content {
+    flex: 0 0 auto;
+    gap: 20px;
+    padding-top: clamp(64px, 14vh, 120px);
   }
 
-  .hero__tagline p {
-    font-size: 21px;
+  .hero__btn {
+    font-size: 14px;
+    padding: 12px 32px;
+    margin-top: 0;
   }
 
   .hero__tagline {
-    padding-bottom: 48px;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .hero__tagline p {
+    max-width: 340px;
+    font-size: 22px;
   }
 }

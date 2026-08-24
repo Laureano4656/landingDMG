@@ -79,6 +79,8 @@
 
 @media (max-width: 640px) {
   .contact__card {
-    padding: 24px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 28px;
   }
 }

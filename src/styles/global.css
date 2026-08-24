@@ -68,7 +68,11 @@ a {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --section-padding-x: 24px;
+  }
+
   .container {
-    padding-inline: 20px;
+    padding-inline: var(--section-padding-x);
   }
 }

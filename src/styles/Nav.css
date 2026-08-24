@@ -16,12 +16,11 @@
 
 @media (max-width: 640px) {
   .nav {
-    justify-content: space-around;
-    gap: 12px;
-    padding: 20px 16px;
+    justify-content: space-between;
+    padding: 20px 24px;
   }
 
   .nav a {
-    font-size: 13px;
+    font-size: 12.5px;
   }
 }

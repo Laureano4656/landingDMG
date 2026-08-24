@@ -87,3 +87,32 @@
     padding: 16px 24px;
   }
 }
+
+@media (max-width: 640px) {
+  .why-us__grid {
+    margin-top: 48px;
+    gap: 52px;
+  }
+
+  .why-us__col--left {
+    text-align: left;
+  }
+
+  .why-us__col--center {
+    text-align: center;
+  }
+
+  .why-us__col p {
+    margin-top: 16px;
+    max-width: none;
+  }
+
+  .why-us__col--left p {
+    margin-left: 0;
+  }
+
+  .why-us__col--center p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
