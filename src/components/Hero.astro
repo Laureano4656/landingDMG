@@ -1,5 +1,4 @@
 ---
-import Nav from './Nav.astro';
 import Logo from './Logo.astro';
 import '../styles/Hero.css';
 ---
@@ -7,10 +6,9 @@ import '../styles/Hero.css';
 <section class="hero" id="home">
   <img class="hero__bg" src="/foto-escritorio-con-mano.png" alt="Escritorio de trabajo con laptop y monitor" />
   <div class="hero__overlay"></div>
-  <Nav />
   <div class="hero__content container">
     <Logo />
-    <button class="hero__btn" type="button">Iniciar sesión</button>
+    <button class="hero__btn" type="button"><a href="http://contabledmg.com.ar/Sistema" target="_blank" rel="noopener noreferrer">Iniciar sesión</a></button>
   </div>
   <div class="hero__tagline container">
     <p>

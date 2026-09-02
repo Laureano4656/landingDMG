@@ -1,0 +1,216 @@
+.services-contact {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  scroll-snap-align: start;
+  /* Single continuous background — painted on the element box (100dvh),
+     so it stays in place as inner content scrolls over it */
+  background-image: url('/foto-diplomas.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+
+/* ─────────────────────────────────────────────
+   Services zone (was WhyUs)
+───────────────────────────────────────────── */
+.why-us {
+  position: relative;
+  padding: var(--section-padding-y) 0;
+  color: var(--color-dark);
+  font-family: var(--font-family);
+}
+
+.why-us__wash {
+  position: absolute;
+  inset: 0;
+  background: rgba(240, 238, 233, 0.7)
+}
+
+.why-us>.container {
+  position: relative;
+  z-index: 1;
+}
+
+.why-us__search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 32px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-pill);
+  background: #f7f5f2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+.why-us__search-icon {
+  color: var(--color-dark);
+  flex-shrink: 0;
+}
+
+/* ── Services grid ── */
+.why-us__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 60px auto 0;
+}
+
+.why-us__col {
+  text-align: center;
+}
+
+.why-us__pill {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: var(--radius-pill);
+  background: var(--color-dark);
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.why-us__col p {
+  max-width: 280px;
+  margin: 20px auto 0;
+  color: var(--color-text-muted);
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+/* ─────────────────────────────────────────────
+   Contact zone (was ContactCard)
+───────────────────────────────────────────── */
+.contact {
+  position: relative;
+  padding: var(--section-padding-y) 0;
+  font-family: var(--font-family);
+}
+
+.contact__wash {
+  position: absolute;
+  inset: 0;
+  background: rgba(240, 238, 233, 0.7);
+}
+
+.contact>.container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact__card {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: var(--radius-card);
+  background: var(--color-dark-translucent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Fix excessive inherited height on the small logo inside the card */
+.contact__card .logo__img {
+  height: auto;
+}
+
+.contact__divider {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 20px 0;
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.contact__email {
+  font-weight: 700;
+}
+
+.contact__social {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contact__icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid var(--color-white);
+  border-radius: 50%;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.contact__icon-btn:hover {
+  background: var(--color-white);
+  color: var(--color-dark);
+}
+
+/* ─────────────────────────────────────────────
+   Responsive
+───────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .why-us__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .why-us__search {
+    font-size: 18px;
+    padding: 16px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .why-us__grid {
+    margin-top: 48px;
+    gap: 52px;
+  }
+
+  .why-us__col--left {
+    text-align: left;
+  }
+
+  .why-us__col--center {
+    text-align: center;
+  }
+
+  .why-us__col p {
+    margin-top: 16px;
+    max-width: none;
+  }
+
+  .why-us__col--left p {
+    margin-left: 0;
+  }
+
+  .why-us__col--center p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact__card {
+    width: 100%;
+    padding: 28px;
+  }
+}

@@ -5,9 +5,8 @@
   --color-dark-translucent: rgba(58, 55, 51, 0.55);
   --color-white: #ffffff;
   --color-text-muted: #6b6b6b;
-  --color-bg-warm: #ded8cf;
   --color-accent-teal: #2f7a6f;
-
+  --color-text: #FAE6D6;
   --hero-overlay-opacity: 0.35;
   --hero-overlay-color: 20, 18, 16;
   --wash-opacity: 0.75;
@@ -29,6 +28,8 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+  overflow: hidden;
 }
 
 html,
@@ -38,10 +39,26 @@ body {
 }
 
 body {
+  height: 100%;
+  overflow: hidden;
   font-family: var(--font-family);
   color: var(--color-dark);
   background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
+}
+
+#scroll-wrapper {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  /* Hide the snap-paging scrollbar */
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE / Edge */
+}
+
+#scroll-wrapper::-webkit-scrollbar {
+  display: none;               /* Chrome / Safari */
 }
 
 img {

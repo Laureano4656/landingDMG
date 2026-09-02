@@ -1,13 +1,20 @@
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10%;
   padding: 24px 40px;
+  mix-blend-mode: difference;
 }
 
 .nav a {
-  color: var(--color-white);
+  color: #fff; /* must be white for mix-blend-mode: difference to invert correctly */
   font-family: var(--font-family);
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 1px;
   text-decoration: none;
@@ -16,7 +23,8 @@
 
 @media (max-width: 640px) {
   .nav {
-    justify-content: space-between;
+    justify-content: center;
+    gap: 24px;
     padding: 20px 24px;
   }
 

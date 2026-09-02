@@ -1,8 +1,8 @@
 ---
 import '../styles/global.css';
+import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
-import WhyUs from '../components/WhyUs.astro';
-import ContactCard from '../components/ContactCard.astro';
+import ServicesContact from '../components/ServicesContact.astro';
 ---
 
 <html lang="es">
@@ -19,11 +19,14 @@ import ContactCard from '../components/ContactCard.astro';
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Contable DMG</title>
+		<title>contabledmg</title>
 	</head>
 	<body>
-		<Hero />
-		<WhyUs />
-		<ContactCard />
+		<Nav />
+		<div id="scroll-wrapper">
+			<Hero />
+			<ServicesContact />
+		</div>
+		<script src="../scripts/page-nav.js"></script>
 	</body>
 </html>

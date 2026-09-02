@@ -18,7 +18,8 @@
 }
 
 .logo--large .logo__img {
-  max-width: 437px;
+  max-width: 340px;
+  height: 230px;
 }
 
 .logo--small .logo__img {
@@ -27,7 +28,7 @@
 
 @media (max-width: 640px) {
   .logo--large .logo__img {
-    max-width: 306px;
+    max-width: 255px;
     height: auto;
   }
 
