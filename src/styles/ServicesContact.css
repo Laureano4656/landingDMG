@@ -6,7 +6,7 @@
   scroll-snap-align: start;
   /* Single continuous background — painted on the element box (100dvh),
      so it stays in place as inner content scrolls over it */
-  background-image: url('/foto-diplomas.png');
+  background-image: url('/foto-diplomas.avif');
   background-size: cover;
   background-position: center center;
 }

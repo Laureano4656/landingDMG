@@ -17,8 +17,21 @@ let isNavigating = false;
 
 const wrapper = document.getElementById('scroll-wrapper');
 const servicesEl = document.querySelector('.services-contact');
+const navEl = document.querySelector('.nav');
 
 if (wrapper && servicesEl) {
+  // Toggle difference blend mode: disabled in Hero, active in Services/Contact
+  const updateNavBlendMode = () => {
+    if (!navEl) return;
+    const navBottom = navEl.getBoundingClientRect().bottom;
+    const servicesTop = servicesEl.getBoundingClientRect().top;
+    const isPastHero = servicesTop <= navBottom;
+    navEl.classList.toggle('nav--scrolled', isPastHero);
+  };
+
+  wrapper.addEventListener('scroll', updateNavBlendMode, { passive: true });
+  updateNavBlendMode();
+
   const isAtServicesTop = () => servicesEl.scrollTop <= EDGE_BUFFER_PX;
   const isOnServicesPage = () =>
     wrapper.scrollTop >= servicesEl.offsetTop - EDGE_BUFFER_PX;
