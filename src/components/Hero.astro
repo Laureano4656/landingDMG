@@ -13,7 +13,20 @@ import '../styles/Hero.css';
   <div class="hero__tagline container">
     <p>
       Asesoramiento impositivo<br />
-      <strong>claro, moderno</strong> y <strong>tu medida</strong>
+      <strong>claro, moderno</strong> y a <strong>tu medida</strong>
     </p>
   </div>
 </section>
+
+<script>
+  // On touch devices, :hover sticks after tap. Suppress it briefly after touchend.
+  const btn = document.querySelector('.hero__btn');
+  if (btn) {
+    btn.addEventListener('touchend', () => {
+      btn.classList.add('no-hover');
+      btn.addEventListener('mouseleave', () => btn.classList.remove('no-hover'), { once: true });
+      // Fallback: remove after 500ms in case mouseleave never fires
+      setTimeout(() => btn.classList.remove('no-hover'), 500);
+    });
+  }
+</script>

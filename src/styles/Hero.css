@@ -48,20 +48,28 @@
   font-family: var(--font-family);
   font-size: 1.5rem;
   font-weight: 500;
-  padding: 12px 32px;
+  padding: 0;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease;
   margin-top: 2rem;
 }
 
 .hero__btn a {
+  display: block;
+  padding: 12px 32px;
   color: var(--color-white);
   text-decoration: none;
 }
 
-.hero__btn:hover {
-  background: var(--color-white);
-  color: var(--color-dark);
+/* Glass hover — text stays readable */
+.hero__btn:hover,
+.hero__btn:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Suppress sticky hover after touch tap */
+.hero__btn.no-hover:hover {
+  background: transparent;
 }
 
 .hero__tagline {
@@ -93,8 +101,12 @@
 
   .hero__btn {
     font-size: 14px;
-    padding: 10px 26px;
+    padding: 0;
     margin-top: 0;
+  }
+
+  .hero__btn a {
+    padding: 10px 26px;
   }
 
   .hero__tagline {
