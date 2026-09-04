@@ -20,6 +20,9 @@
   padding: var(--section-padding-y) 0;
   color: var(--color-dark);
   font-family: var(--font-family);
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .why-us__wash {
